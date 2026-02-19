@@ -69,7 +69,7 @@ export function Home() {
                 <div className="space-y-2 text-sm text-gray-600">
                   <div className="flex items-center gap-2">
                     <Calendar className="size-4" />
-                    {new Date(event.date).toLocaleDateString('en-US', {
+                    {new Date(event.Data).toLocaleDateString('en-US', {
                       weekday: 'short',
                       month: 'short',
                       day: 'numeric',
@@ -78,17 +78,17 @@ export function Home() {
                   </div>
                   <div className="flex items-center gap-2">
                     <Clock className="size-4" />
-                    {event.time}
+                    {event.Godzina}
                   </div>
                   <div className="flex items-center gap-2">
                     <MapPin className="size-4" />
-                    {event.venue}, {event.location}
+                    {event.Miejsce}, {event.Lokalizacja}
                   </div>
                 </div>
               </CardContent>
               <CardFooter className="p-6 pt-0">
                 <Link to={`/event/${event.id}`} className="w-full">
-                  <Button className="w-full">View Details</Button>
+                  <Button className="w-full">Sprawdź więcej</Button>
                 </Link>
               </CardFooter>
             </Card>
