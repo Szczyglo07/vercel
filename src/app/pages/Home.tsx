@@ -71,7 +71,7 @@ export function Home() {
                 <div className="space-y-2 text-sm text-gray-600">
                   <div className="flex items-center gap-2">
                     <Calendar className="size-4" />
-                    {new Date(event.Data).toLocaleDateString('en-US', {
+                    {new Date(event.Data).toLocaleDateString('pl-PL', {
                       weekday: 'short',
                       month: 'short',
                       day: 'numeric',
