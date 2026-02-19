@@ -136,7 +136,9 @@ export function Checkout() {
 
                   <Button type="submit" className="w-full" size="lg" disabled={isProcessing}>
                     <CreditCard className="size-5 mr-2" />
-                    {isProcessing ? 'Procesowanie...' : `Zapłać '${getTotal()} * 1.05 'zł`}
+                    {isProcessing ? 'Procesowanie...' : `Zapłać ${(getTotal() * 1.05).toFixed(2)} zł`
+}
+
                   </Button>
                 </form>
               </CardContent>

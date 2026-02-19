@@ -61,9 +61,21 @@ export function EventDetail() {
     });
 
     if (itemsAdded > 0) {
-      toast.success(`Dodano ${itemsAdded} biletów to cart!`);
-      setSelectedTickets({});
+      if(itemsAdded = 1){
+        toast.success(`Dodano ${itemsAdded} bilet do koszyka!`);
+        setSelectedTickets({});
+      }
+      else if(itemsAdded < 5){
+        toast.success(`Dodano ${itemsAdded} bilety do koszyka!`);
+        setSelectedTickets({});
+      }
+      else{
+        toast.success(`Dodano ${itemsAdded} biletów do koszyka!`);
+        setSelectedTickets({});
+
+      }
     }
+    
   };
 
   const totalSelected = Object.values(selectedTickets).reduce((sum, qty) => sum + qty, 0);
@@ -146,7 +158,7 @@ export function EventDetail() {
           <div>
             <Card className="sticky top-24">
               <CardHeader>
-                <CardTitle>Wybierz bilety</CardTitle>
+                <CardTitle>Wybierz</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 {event.ticketTypes.map((ticket) => (
@@ -155,7 +167,7 @@ export function EventDetail() {
                       <div className="flex-1">
                         <p>{ticket.name}</p>
                         <p className="text-sm text-gray-600">
-                          {ticket.available} Dostępne
+                          Dostępne {ticket.available} biletów
                         </p>
                         {ticket.description && (
                           <p className="text-xs text-gray-500 mt-1">{ticket.description}</p>
