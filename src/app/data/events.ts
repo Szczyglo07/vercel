@@ -1,7 +1,7 @@
 export interface Event {
   id: string;
   title: string;
-  category: 'music' | 'sports' | 'theater' | 'comedy' | 'festival' | 'conference';
+  category: 'Muzyka' | 'sports' | 'theater' | 'comedy' | 'festival' | 'conference';
   date: string;
   time: string;
   venue: string;
@@ -39,7 +39,7 @@ export const events: Event[] = [
   {
     id: '2',
     title: 'Rock Legends Live',
-    category: 'music',
+    category: 'Muzyka',
     date: '2026-05-20',
     time: '20:00',
     venue: 'Madison Square Garden',
@@ -166,7 +166,7 @@ export const events: Event[] = [
 {
   id: '10',
   title: 'Electronic Music Festival',
-  category: 'music',
+  category: 'Muzyka',
   date: '2026-08-25',
   time: '22:00',
   venue: 'Open Air Arena',
