@@ -64,7 +64,7 @@ export function Home() {
                 <div className="flex items-center justify-between mb-3">
                   <Badge>{event.category}</Badge>
                   <span className="text-sm text-gray-600">
-                    From ${Math.min(...event.ticketTypes.map((t) => t.price))}
+                    Od {Math.min(...event.ticketTypes.map((t) => t.price))}zł
                   </span>
                 </div>
                 <h3 className="text-xl mb-3">{event.title}</h3>
