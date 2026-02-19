@@ -57,7 +57,7 @@ export function Checkout() {
                     <div className="flex-1">
                       <h3 className="mb-1">{item.eventTitle}</h3>
                       <p className="text-sm text-gray-600">{item.ticketTypeName}</p>
-                      <p className="text-sm">${item.price} każdy</p>
+                      <p className="text-sm">{item.price}zł każdy</p>
                     </div>
                     <div className="flex items-center gap-3">
                       <div className="flex items-center gap-2 border rounded px-2">
@@ -75,7 +75,7 @@ export function Checkout() {
                           +
                         </button>
                       </div>
-                      <p className="w-20 text-right">${item.price * item.quantity}</p>
+                      <p className="w-20 text-right">{item.price * item.quantity}zł</p>
                       <Button
                         variant="ghost"
                         size="sm"
@@ -136,7 +136,7 @@ export function Checkout() {
 
                   <Button type="submit" className="w-full" size="lg" disabled={isProcessing}>
                     <CreditCard className="size-5 mr-2" />
-                    {isProcessing ? 'Procesowanie...' : `Zapłać $${getTotal()}`}
+                    {isProcessing ? 'Procesowanie...' : `Zapłać ${getTotal()}zł`}
                   </Button>
                 </form>
               </CardContent>
@@ -158,7 +158,7 @@ export function Checkout() {
                       <span className="text-gray-600">
                         {item.quantity}x {item.ticketTypeName}
                       </span>
-                      <span>${item.price * item.quantity}</span>
+                      <span>{item.price * item.quantity}zł</span>
                     </div>
                   ))}
                 </div>
@@ -168,11 +168,11 @@ export function Checkout() {
                 <div className="space-y-2">
                   <div className="flex justify-between">
                     <span className="text-gray-600">Łączna kwota</span>
-                    <span>${getTotal()}</span>
+                    <span>{getTotal()}zł</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-600">Opłata serwisowa</span>
-                    <span>${(getTotal() * 0.05).toFixed(2)}</span>
+                    <span>{(getTotal() * 0.05).toFixed(2)}zł</span>
                   </div>
                 </div>
 
@@ -180,7 +180,7 @@ export function Checkout() {
 
                 <div className="flex justify-between text-lg">
                   <span>Łącznie</span>
-                  <span>${(getTotal() * 1.05).toFixed(2)}</span>
+                  <span>{(getTotal() * 1.05).toFixed(2)}zł</span>
                 </div>
               </CardContent>
             </Card>
