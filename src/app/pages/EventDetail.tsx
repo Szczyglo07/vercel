@@ -61,16 +61,16 @@ export function EventDetail() {
     });
 
     if (itemsAdded > 0) {
-      if(itemsAdded = 1){
-        toast.success(`Dodano ${itemsAdded} bilet do koszyka!`);
+      if(itemsAdded > 4){
+        toast.success(`Dodano ${itemsAdded} biletów do koszyka!`);
         setSelectedTickets({});
       }
-      else if(itemsAdded < 5){
+      else if(itemsAdded > 1){
         toast.success(`Dodano ${itemsAdded} bilety do koszyka!`);
         setSelectedTickets({});
       }
       else{
-        toast.success(`Dodano ${itemsAdded} biletów do koszyka!`);
+        toast.success(`Dodano ${itemsAdded} bilet do koszyka!`);
         setSelectedTickets({});
 
       }
