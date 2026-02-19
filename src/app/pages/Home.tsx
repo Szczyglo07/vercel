@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { Link } from 'react-router';
 import { events } from '../data/events';
 import { Card, CardContent, CardFooter } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
 import { Button } from '../components/ui/button';
 import { Calendar, MapPin, Clock } from 'lucide-react';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
 const categories = ['Wszystkie', 'Muzyka', 'Sport', 'Teatr', 'Kabaret', 'Festiwal', 'Konferencja'];
