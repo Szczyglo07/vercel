@@ -20,7 +20,7 @@ export function Checkout() {
 
     // Simulate payment processing
     setTimeout(() => {
-      toast.success('Order confirmed! Check your email for tickets.');
+      toast.success('Złożono zamówienie. Bilety zostaną wysłane na twój adres email.');
       clearCart();
       setIsProcessing(false);
       navigate('/');
@@ -136,7 +136,7 @@ export function Checkout() {
 
                   <Button type="submit" className="w-full" size="lg" disabled={isProcessing}>
                     <CreditCard className="size-5 mr-2" />
-                    {isProcessing ? 'Procesowanie...' : `Zapłać ${getTotal()}zł`}
+                    {isProcessing ? 'Procesowanie...' : `Zapłać '${getTotal()} * 1.05 'zł`}
                   </Button>
                 </form>
               </CardContent>
