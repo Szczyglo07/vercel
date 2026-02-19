@@ -6,10 +6,10 @@ import { Badge } from '../components/ui/badge';
 import { Button } from '../components/ui/button';
 import { Calendar, MapPin, Clock } from 'lucide-react';
 
-const categories = ['all', 'music', 'sports', 'theater', 'comedy', 'festival', 'conference'];
+const categories = ['all', 'Muzyka', 'sports', 'theater', 'comedy', 'festival', 'conference'];
 const categoryLabels: Record<string, string> = {
   all: 'Wszystkie',
-  music: 'Muzyka',
+  Muzyka: 'Muzyka',
   sports: 'Sport',
   theater: 'Teatr',
   comedy: 'Stand-up',
