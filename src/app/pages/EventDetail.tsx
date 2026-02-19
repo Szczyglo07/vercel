@@ -61,7 +61,7 @@ export function EventDetail() {
     });
 
     if (itemsAdded > 0) {
-      toast.success(`Added ${itemsAdded} ticket${itemsAdded > 1 ? 's' : ''} to cart!`);
+      toast.success(`Dodano ${itemsAdded} biletów to cart!`);
       setSelectedTickets({});
     }
   };
@@ -118,7 +118,7 @@ export function EventDetail() {
                 <div className="flex items-center gap-3">
                   <Clock className="size-5 text-blue-600" />
                   <div>
-                    <p className="text-sm text-gray-600">Czas</p>
+                    <p className="text-sm text-gray-600">Godzina</p>
                     <p>{event.Godzina}</p>
                   </div>
                 </div>
@@ -161,7 +161,7 @@ export function EventDetail() {
                           <p className="text-xs text-gray-500 mt-1">{ticket.description}</p>
                         )}
                       </div>
-                      <p className="text-lg">${ticket.price}</p>
+                      <p className="text-lg">{ticket.price}zł</p>
                     </div>
                     <div className="flex items-center justify-between mt-3">
                       <div className="flex items-center gap-2">
@@ -196,7 +196,7 @@ export function EventDetail() {
                     </div>
                     <div className="flex justify-between text-lg">
                       <span>Łączna cena:</span>
-                      <span>${totalPrice}</span>
+                      <span>{totalPrice}zł</span>
                     </div>
                   </div>
                 )}
