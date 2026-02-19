@@ -106,7 +106,7 @@ export function EventDetail() {
                   <div>
                     <p className="text-sm text-gray-600">Data</p>
                     <p>
-                      {new Date(event.date).toLocaleDateString('en-US', {
+                      {new Date(event.Data).toLocaleDateString('en-US', {
                         weekday: 'long',
                         month: 'long',
                         day: 'numeric',
@@ -119,15 +119,15 @@ export function EventDetail() {
                   <Clock className="size-5 text-blue-600" />
                   <div>
                     <p className="text-sm text-gray-600">Czas</p>
-                    <p>{event.time}</p>
+                    <p>{event.Godzina}</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
                   <MapPin className="size-5 text-blue-600" />
                   <div>
                     <p className="text-sm text-gray-600">Miejsce</p>
-                    <p>{event.venue}</p>
-                    <p className="text-sm text-gray-600">{event.location}</p>
+                    <p>{event.Miejsce}</p>
+                    <p className="text-sm text-gray-600">{event.Lokalizacja}</p>
                   </div>
                 </div>
               </CardContent>
@@ -135,7 +135,7 @@ export function EventDetail() {
 
             <Card>
               <CardHeader>
-                <CardTitle>O tym wydarzeniut</CardTitle>
+                <CardTitle>O tym wydarzeniu</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-700 leading-relaxed">{event.description}</p>
