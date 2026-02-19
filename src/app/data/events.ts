@@ -1,7 +1,7 @@
 export interface Event {
   id: string;
   title: string;
-  category: 'Muzyka' | 'sports' | 'theater' | 'comedy' | 'festival' | 'conference';
+  category: 'Muzyka' | 'Sport' | 'Teatr' | 'Kabaret' | 'festival' | 'conference';
   date: string;
   time: string;
   venue: string;

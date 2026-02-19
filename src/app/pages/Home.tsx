@@ -6,15 +6,15 @@ import { Badge } from '../components/ui/badge';
 import { Button } from '../components/ui/button';
 import { Calendar, MapPin, Clock } from 'lucide-react';
 
-const categories = ['all', 'Muzyka', 'sports', 'theater', 'comedy', 'festival', 'conference'];
+const categories = ['Wszystkie', 'Muzyka', 'Sport', 'Teatr', 'Kabaret', 'Festiwal', 'Konferencja'];
 const categoryLabels: Record<string, string> = {
-  all: 'Wszystkie',
+  Wszystkie: 'Wszystkie',
   Muzyka: 'Muzyka',
-  sports: 'Sport',
-  theater: 'Teatr',
-  comedy: 'Stand-up',
-  festival: 'Festiwal',
-  conference: 'Konferencje',
+  Sport: 'Sport',
+  Teatr: 'Teatr',
+  Kabaret: 'Kabaret',
+  Festiwal: 'Festiwal',
+  Konferencja: 'Konferencja',
 };
 
 export function Home() {
@@ -29,8 +29,8 @@ export function Home() {
     <div className="min-h-screen bg-gray-50">
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
         <div className="container mx-auto px-4">
-          <h1 className="text-5xl mb-4">Discover Amazing Events</h1>
-          <p className="text-xl opacity-90">Find Your Event And Book Your Ticket</p>
+          <h1 className="text-5xl mb-4">Odkryj niesamowite wydarzenia!</h1>
+          <p className="text-xl opacity-90">Wybierz swoje wydarzenie i kup bilet już teraz!</p>
         </div>
       </div>
 
@@ -97,7 +97,7 @@ export function Home() {
 
         {filteredEvents.length === 0 && (
           <div className="text-center py-16">
-            <p className="text-gray-500 text-lg">No events found in this category</p>
+            <p className="text-gray-500 text-lg">Brak nadchodzących wydarzeń w tej kategorii.</p>
           </div>
         )}
       </div>
