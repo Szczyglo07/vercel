@@ -106,7 +106,7 @@ export function EventDetail() {
                   <div>
                     <p className="text-sm text-gray-600">Data</p>
                     <p>
-                      {new Date(event.Data).toLocaleDateString('en-US', {
+                      {new Date(event.Data).toLocaleDateString('pl-PL', {
                         weekday: 'long',
                         month: 'long',
                         day: 'numeric',
